@@ -1,0 +1,58 @@
+<html>
+<script>
+function fun()
+{
+var a=f1.t1.value;
+var b=f1.t2.value;
+
+
+if(a=="")
+{
+alert("name is empty");
+f1.t1.focus();
+}
+else if(!isNaN(a))                   
+{
+alert("name cannot have number");
+f1.t1.focus();
+}
+
+else if(b=="")
+{
+alert("password cannot be empty");
+f1.t2.focus();
+}
+else if(b.length!=6)                   
+{
+alert("password length should be 6");
+f1.t2.focus();
+}
+else
+{
+alert("successful submission");
+f1.submit();
+}
+
+}
+</script>
+
+<body bgcolor=cyan>
+<form name="f1" action=second.jsp>
+<h2 align=center><font color="red">LOGIN PAGE</font></h2>
+<hr color=blue>
+<table>
+
+
+
+<tr><td>Name<td><input type="text" name=t1 size=20></tr>
+<tr><td>Password<td><input type="text" name=t2 size=20></tr>
+
+<tr><td><td><input type="button"value=Login onClick='fun()'></tr>
+
+</table>
+</form>
+</body>
+<html>
+
+
+
